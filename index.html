@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUREA | Lüks Güzellik & Bakım Merkezi</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        blush: '#F9F3F0',
+                        roseGold: '#D4AF37',
+                        darkText: '#2C2A29',
+                        softGray: '#7E7A76'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</head>
+<body class="bg-blush text-darkText font-sans antialiased selection:bg-roseGold selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-blush/90 backdrop-blur-md border-b border-roseGold/20 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="font-serif text-2xl font-bold tracking-widest text-darkText">AUREA<span class="text-roseGold">.</span></a>
+            
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+                <a href="#hakkimizda" class="hover:text-roseGold transition-colors">Hakkımızda</a>
+                <a href="#hizmetler" class="hover:text-roseGold transition-colors">Hizmetlerimiz</a>
+                <a href="#galeri" class="hover:text-roseGold transition-colors">Galeri</a>
+                <a href="#iletisim" class="hover:text-roseGold transition-colors">İletişim</a>
+            </nav>
+
+            <div class="hidden md:block">
+                <a href="tel:+905551234567" class="bg-darkText text-blush px-6 py-3 rounded-full text-xs font-semibold tracking-wider uppercase hover:bg-roseGold hover:text-white transition-all">Randevu Al</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-2xl text-darkText focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-blush border-b border-roseGold/20 shadow-lg py-6 px-6 flex flex-col space-y-4 text-center">
+            <a href="#hakkimizda" class="mobile-link text-lg font-medium">Hakkımızda</a>
+            <a href="#hizmetler" class="mobile-link text-lg font-medium">Hizmetlerimiz</a>
+            <a href="#galeri" class="mobile-link text-lg font-medium">Galeri</a>
+            <a href="#iletisim" class="mobile-link text-lg font-medium">İletişim</a>
+            <a href="tel:+905551234567" class="bg-roseGold text-white py-3 rounded-full text-sm font-semibold tracking-wider uppercase">Randevu Al</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-6 py-20 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 text-center lg:text-left">
+                <span class="inline-block text-xs uppercase tracking-[0.3em] font-semibold text-roseGold bg-roseGold/10 px-4 py-2 rounded-full">Kişiye Özel Güzellik Ritüeli</span>
+                <h1 class="font-serif text-4xl sm:text-6xl font-normal leading-tight text-darkText">
+                    Doğal Zarafetinizi <i class="italic font-light">Keşfedin</i>
+                </h1>
+                <p class="text-softGray text-base sm:text-lg max-w-lg mx-auto lg:mx-0 font-light">
+                    Modern teknolojiler ve uzman kadromuzla ruhunuzu ve cildinizi tazeleyin. Kendinize hak ettiğiniz lüks bakım hediyesini verin.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-4">
+                    <a href="#hizmetler" class="bg-darkText text-blush px-8 py-4 rounded-full text-sm font-semibold tracking-wider uppercase hover:bg-roseGold hover:text-white transition-all text-center shadow-lg">Hizmetleri İncele</a>
+                    <a href="#iletisim" class="border border-darkText/30 text-darkText px-8 py-4 rounded-full text-sm font-semibold tracking-wider uppercase hover:border-roseGold hover:text-roseGold transition-all text-center">İletişim & Konum</a>
+                </div>
+            </div>
+            <div class="relative flex justify-center">
+                <div class="w-72 sm:w-96 h-96 sm:h-[450px] rounded-t-full rounded-b-3xl overflow-hidden shadow-2xl border-4 border-white">
+                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=800" alt="Güzellik Merkezi" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-roseGold/20 hidden sm:block">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-roseGold/10 rounded-full flex items-center justify-center text-roseGold text-xl">
+                            <i class="fa-solid fa-spa"></i>
+                        </div>
+                        <div>
+                            <p class="font-serif font-bold text-lg">100% Organik</p>
+                            <p class="text-xs text-softGray">Premium Bakım Ürünleri</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hakkımızda -->
+    <section id="hakkimizda" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="grid grid-cols-2 gap-4">
+                <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&q=80&w=600" alt="Cilt Bakımı" class="rounded-2xl shadow-md w-full h-64 object-cover">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=600" alt="Spa Ambiyansı" class="rounded-2xl shadow-md w-full h-64 object-cover mt-8">
+            </div>
+            <div class="space-y-6">
+                <span class="text-xs uppercase tracking-[0.25em] font-semibold text-roseGold">Hakkımızda</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-darkText">Güzelliğinize Sanatsal Bir Dokunuş</h2>
+                <p class="text-softGray font-light leading-relaxed">
+                    AUREA Güzellik Merkezi olarak, estetik ve sağlığı kusursuz bir uyumla buluşturuyoruz. En son trendleri ve güvenilir cihaz teknolojilerini, alanında uzman ekibimizin tecrübesiyle harmanlayarak size özel çözümler sunuyoruz.
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-4 border-t border-gray-100">
+                    <div>
+                        <h3 class="font-serif text-3xl font-bold text-roseGold">10+</h3>
+                        <p class="text-xs uppercase tracking-wider text-softGray mt-1">Yıllık Uzmanlık</p>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-3xl font-bold text-roseGold">5000+</h3>
+                        <p class="text-xs uppercase tracking-wider text-softGray mt-1">Mutlu Danışan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hizmetler -->
+    <section id="hizmetler" class="py-24 bg-blush">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <span class="text-xs uppercase tracking-[0.25em] font-semibold text-roseGold">Özel Uygulamalarımız</span>
+            <h2 class="font-serif text-3xl sm:text-5xl mt-3 mb-16 text-darkText">Popüler Hizmetlerimiz</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <!-- Hizmet 1 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-roseGold/10 group">
+                    <div class="w-14 h-14 bg-blush rounded-2xl flex items-center justify-center text-roseGold text-2xl mb-6 group-hover:bg-roseGold group-hover:text-white transition-all">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-3">Lüks Cilt Bakımı</h3>
+                    <p class="text-softGray text-sm font-light leading-relaxed mb-6">Cildinizin ihtiyaç duyduğu derinlemesine nem, arınma ve yenilenme kürleri ile zamansız bir parlaklık kazanın.</p>
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-100 text-sm font-semibold">
+                        <span class="text-roseGold">60 - 90 Dk</span>
+                        <span class="text-darkText">Bilgi Alın</span>
+                    </div>
+                </div>
+                <!-- Hizmet 2 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-roseGold/10 group">
+                    <div class="w-14 h-14 bg-blush rounded-2xl flex items-center justify-center text-roseGold text-2xl mb-6 group-hover:bg-roseGold group-hover:text-white transition-all">
+                        <i class="fa-solid fa-feather"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-3">İpek Kirpik & Laminasyon</h3>
+                    <p class="text-softGray text-sm font-light leading-relaxed mb-6">Bakışlarınıza derinlik katan doğal görünümlü ipek kirpik uygulamaları ve kaş laminasyon tasarımları.</p>
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-100 text-sm font-semibold">
+                        <span class="text-roseGold">45 - 60 Dk</span>
+                        <span class="text-darkText">Bilgi Alın</span>
+                    </div>
+                </div>
+                <!-- Hizmet 3 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-roseGold/10 group">
+                    <div class="w-14 h-14 bg-blush rounded-2xl flex items-center justify-center text-roseGold text-2xl mb-6 group-hover:bg-roseGold group-hover:text-white transition-all">
+                        <i class="fa-solid fa-hand-sparkles"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-3">Bölgesel İncelme & Sıkılaşma</h3>
+                    <p class="text-softGray text-sm font-light leading-relaxed mb-6">En son teknoloji zayıflama ve kontürleme sistemleri ile hayalinizdeki formunuza konforla kavuşun.</p>
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-100 text-sm font-semibold">
+                        <span class="text-roseGold">Kür Programı</span>
+                        <span class="text-darkText">Bilgi Alın</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri -->
+    <section id="galeri" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <span class="text-xs uppercase tracking-[0.25em] font-semibold text-roseGold">Stüdyomuzdan Kareler</span>
+            <h2 class="font-serif text-3xl sm:text-5xl mt-3 mb-16 text-darkText">Atmosferimiz</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="overflow-hidden rounded-3xl shadow-md h-72">
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=600" alt="Salon" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="overflow-hidden rounded-3xl shadow-md h-72">
+                    <img src="https://images.unsplash.com/photo-1512290900672-872f04e1c7f8?auto=format&fit=crop&q=80&w=600" alt="Bakım" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="overflow-hidden rounded-3xl shadow-md h-72">
+                    <img src="https://images.unsplash.com/photo-1560750588-73f07b2fd58b?auto=format&fit=crop&q=80&w=600" alt="Ürünler" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim -->
+    <section id="iletisim" class="py-24 bg-blush border-t border-roseGold/10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div class="space-y-6">
+                <span class="text-xs uppercase tracking-[0.25em] font-semibold text-roseGold">Bize Ulaşın</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-darkText">Randevu ve Bilgi İçin</h2>
+                <p class="text-softGray font-light leading-relaxed">
+                    Sorularınız veya size özel bakım paketlerimiz hakkında bilgi almak için bizimle iletişime geçebilir, hemen randevunuzu oluşturabilirsiniz.
+                </p>
+                
+                <div class="space-y-4 pt-4">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-roseGold shadow-sm">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs uppercase text-softGray font-medium">Adres</p>
+                            <p class="text-darkText font-medium">Nişantaşı, Şişli / İstanbul</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-roseGold shadow-sm">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs uppercase text-softGray font-medium">Telefon</p>
+                            <p class="text-darkText font-medium">+90 (555) 123 45 67</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-roseGold shadow-sm">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs uppercase text-softGray font-medium">Çalışma Saatleri</p>
+                            <p class="text-darkText font-medium">Pzt - Cts: 09:00 - 20:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 sm:p-12 rounded-3xl shadow-xl border border-roseGold/20">
+                <h3 class="font-serif text-2xl mb-6">Hızlı Mesaj Gönderin</h3>
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-softGray mb-2">Adınız Soyadınız</label>
+                        <input type="text" class="w-full bg-blush border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-roseGold" placeholder="Örn: Elif Demir">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-softGray mb-2">Telefon Numaranız</label>
+                        <input type="tel" class="w-full bg-blush border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-roseGold" placeholder="0555 ...">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-softGray mb-2">Hizmet Seçimi</label>
+                        <select class="w-full bg-blush border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-roseGold">
+                            <option>Lüks Cilt Bakımı</option>
+                            <option>İpek Kirpik & Laminasyon</option>
+                            <option>Bölgesel İncelme</option>
+                        </select>
+                    </div>
+                    <button type="button" onclick="alert('Randevu talebiniz alınmıştır. En kısa sürede dönüş yapacağız.')" class="w-full bg-darkText text-white py-4 rounded-xl text-xs uppercase tracking-widest font-semibold hover:bg-roseGold transition-all">Randevu Talebi Oluştur</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darkText text-blush/60 py-12 text-center text-xs tracking-widest uppercase">
+        <p>&copy; 2026 AUREA Güzellik Merkezi. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const links = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
